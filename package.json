@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "dotenv": "^16.4.5"
+  },
+  "name": "star-wars-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "format": "npx @biomejs/biome format --write ./server/src && ./client/src",
+    "lint": "npx @biomejs/biome lint --write ./server/src && ./client/src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dolpheus89/star-wars-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dolpheus89/star-wars-API/issues"
+  },
+  "homepage": "https://github.com/Dolpheus89/star-wars-API#readme"
+}
