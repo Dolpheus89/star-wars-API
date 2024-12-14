@@ -1,0 +1,152 @@
+{
+	"homeworlds": [
+		{
+			"name": "Tatooine",
+			"climat": "arid"
+		},
+		{
+			"name": "Naboo",
+			"climat": "temperate"
+		},
+		{
+			"name": "Coruscant",
+			"climat": "temperate"
+		},
+		{
+			"name": "Kashyyyk",
+			"climat": "tropical"
+		},
+		{
+			"name": "Alderaan",
+			"climat": "temperate"
+		},
+		{
+			"name": "Kamino",
+			"climat": "temperate"
+		},
+		{
+			"name": "Hoth",
+			"climat": "frozen"
+		},
+		{
+			"name": "Dagobah",
+			"climat": "swampy"
+		},
+		{
+			"name": "Mustafar",
+			"climat": "volcanic"
+		},
+		{
+			"name": "Endor",
+			"climat": "temperate"
+		},
+		{
+			"name": "Geonosis",
+			"climat": "arid"
+		},
+		{
+			"name": "Yavin 4",
+			"climat": "tropical"
+		},
+		{
+			"name": "Bespin",
+			"climat": "gas giant"
+		},
+		{
+			"name": "Jedha",
+			"climat": "arid"
+		},
+		{
+			"name": "Ryloth",
+			"climat": "tropical"
+		},
+		{
+			"name": "Mandalore",
+			"climat": "temperate"
+		},
+		{
+			"name": "Lothal",
+			"climat": "temperate"
+		},
+		{
+			"name": "Corellia",
+			"climat": "temperate"
+		},
+		{
+			"name": "Dathomir",
+			"climat": "humid"
+		},
+		{
+			"name": "Felucia",
+			"climat": "tropical"
+		},
+		{
+			"name": "Utapau",
+			"climat": "arid"
+		},
+		{
+			"name": "Ilum",
+			"climat": "frozen"
+		},
+		{
+			"name": "Exegol",
+			"climat": "barren"
+		},
+		{
+			"name": "Ahch-To",
+			"climat": "temperate"
+		},
+		{
+			"name": "Crait",
+			"climat": "barren"
+		},
+		{
+			"name": "Mon Cala",
+			"climat": "aquatic"
+		},
+		{
+			"name": "Nal Hutta",
+			"climat": "swampy"
+		},
+		{
+			"name": "Jakku",
+			"climat": "arid"
+		},
+		{
+			"name": "Chandrila",
+			"climat": "temperate"
+		},
+		{
+			"name": "Scarif",
+			"climat": "tropical"
+		},
+		{
+			"name": "Hosnian Prime",
+			"climat": "temperate"
+		},
+		{
+			"name": "Sullust",
+			"climat": "volcanic"
+		},
+		{
+			"name": "Polis Massa",
+			"climat": "asteroid"
+		},
+		{
+			"name": "Ord Mantell",
+			"climat": "temperate"
+		},
+		{
+			"name": "Zeffo",
+			"climat": "temperate"
+		},
+		{
+			"name": "Pantora",
+			"climat": "icy"
+		},
+		{
+			"name": "Eriadu",
+			"climat": "industrial"
+		}
+	]
+}

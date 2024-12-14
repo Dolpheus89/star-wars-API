@@ -1,0 +1,15 @@
+{
+	"characters": [
+		{
+			"name": "Luke Skywalker",
+			"heigth": "172",
+			"mass": "073",
+			"birth_year": "-19",
+			"gender": "male",
+			"canon_status": true,
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
+			"speciesName": "Human",
+			"homeworldName": "Tatooine"
+		}
+	]
+}
