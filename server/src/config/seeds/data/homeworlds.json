@@ -147,6 +147,62 @@
 		{
 			"name": "Eriadu",
 			"climat": "industrial"
+		},
+		{
+			"name": "Stewjon",
+			"climat": "temperate"
+		},
+		{
+			"name": "Rodia",
+			"climat": "tropical"
+		},
+		{
+			"name": "Bestine",
+			"climat": "temperate"
+		},
+		{
+			"name": "Trandosha",
+			"climat": "arid"
+		},
+		{
+			"name": "Socorro",
+			"climat": "arid"
+		},
+		{
+			"name": "Haruun Kal",
+			"climat": "tropical"
+		},
+		{
+			"name": "Cerea",
+			"climat": "temperate"
+		},
+		{
+			"name": "Dorin",
+			"climat": "toxic"
+		},
+		{
+			"name": "Mirial",
+			"climat": "cold"
+		},
+		{
+			"name": "Serenno",
+			"climat": "temperate"
+		},
+		{
+			"name": "Kalee",
+			"climat": "arid"
+		},
+		{
+			"name": "Parnassos",
+			"climat": "harsh"
+		},
+		{
+			"name": "Neimoidia",
+			"climat": "temperate"
+		},
+		{
+			"name": "Glee Anselm",
+			"climat": "tropical"
 		}
 	]
 }

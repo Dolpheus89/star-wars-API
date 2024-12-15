@@ -11,42 +11,88 @@ export const seedDatabase = async (dataSource: DataSource) => {
 	const homeworldRepo = dataSource.getRepository(Homeworld);
 	const characterRepo = dataSource.getRepository(Character);
 
+	// Species
+	console.log("Starting species seeding...");
 	for (const species of speciesData.species) {
-		const existing = await speciesRepo.findOne({
-			where: { name: species.name },
-		});
-		if (!existing) {
+		const existingSpecies = await speciesRepo
+			.createQueryBuilder("species")
+			.where("LOWER(species.name) = LOWER(:name)", { name: species.name })
+			.getOne();
+
+		if (!existingSpecies) {
 			await speciesRepo.save(species);
+			console.log(`Created species: ${species.name}`);
 		}
 	}
 
+	// Homeworlds
+	console.log("Starting homeworlds seeding...");
 	for (const homeworld of homeworldsData.homeworlds) {
-		const existing = await homeworldRepo.findOne({
-			where: { name: homeworld.name },
-		});
-		if (!existing) {
+		const existingHomeworld = await homeworldRepo
+			.createQueryBuilder("homeworld")
+			.where("LOWER(homeworld.name) = LOWER(:name)", { name: homeworld.name })
+			.getOne();
+
+		if (!existingHomeworld) {
 			await homeworldRepo.save(homeworld);
+			console.log(`Created homeworld: ${homeworld.name}`);
 		}
 	}
 
+	// Characters
+	console.log("Starting characters seeding...");
 	for (const charData of charactersData.characters) {
-		const existing = await characterRepo.findOne({
-			where: { name: charData.name },
-		});
-		if (!existing) {
-			const species = await speciesRepo.findOne({
-				where: { name: charData.speciesName },
-			});
-			const homeworld = await homeworldRepo.findOne({
-				where: { name: charData.homeworldName },
-			});
+		const existingCharacter = await characterRepo
+			.createQueryBuilder("character")
+			.where("LOWER(character.name) = LOWER(:name)", { name: charData.name })
+			.getOne();
 
-			const character = characterRepo.create({
-				...charData,
-				species,
-				homeworld,
-			});
-			await characterRepo.save(character);
+		if (!existingCharacter) {
+			const species = await speciesRepo
+				.createQueryBuilder("species")
+				.where("LOWER(species.name) = LOWER(:name)", {
+					name: charData.speciesName,
+				})
+				.getOne();
+
+			const homeworld = await homeworldRepo
+				.createQueryBuilder("homeworld")
+				.where("LOWER(homeworld.name) = LOWER(:name)", {
+					name:
+						charData.homeworldName === "unknown"
+							? null
+							: charData.homeworldName,
+				})
+				.getOne();
+
+			if (!species) {
+				console.log(
+					`Species not found for ${charData.name}: ${charData.speciesName}`,
+				);
+				continue;
+			}
+
+			if (!homeworld && charData.homeworldName !== "unknown") {
+				console.log(
+					`Homeworld not found for ${charData.name}: ${charData.homeworldName}`,
+				);
+				continue;
+			}
+
+			const { speciesName, homeworldName, ...characterData } = charData;
+
+			try {
+				const newCharacter = characterRepo.create({
+					...characterData,
+					species: species,
+					homeworld: homeworld || null,
+				});
+
+				await characterRepo.save(newCharacter);
+				console.log(`Created character: ${charData.name}`);
+			} catch (error) {
+				console.error(`Error creating ${charData.name}:`, error);
+			}
 		}
 	}
 };

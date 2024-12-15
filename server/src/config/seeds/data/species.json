@@ -149,6 +149,31 @@
 			"name": "Pau'an",
 			"classification": "mammal",
 			"average_lifespan": "700"
+		},
+		{
+			"name": "Yoda's Species",
+			"classification": "unknown",
+			"average_lifespan": "900"
+		},
+		{
+			"name": "Neimoidian",
+			"classification": "reptilian",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Dathomirian Zabrak",
+			"classification": "mammal",
+			"average_lifespan": "100"
+		},
+		{
+			"name": "Nautolan",
+			"classification": "amphibian",
+			"average_lifespan": "70"
+		},
+		{
+			"name": "Kaleesh",
+			"classification": "reptilian",
+			"average_lifespan": "80"
 		}
 	]
 }
