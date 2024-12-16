@@ -1,12 +1,15 @@
 import { Module } from "@nestjs/common";
+import { ConfigModule, ConfigService } from "@nestjs/config";
+import { ServeStaticModule } from "@nestjs/serve-static";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { DataSource } from "typeorm";
+import * as path from "node:path";
+
 import { AppController } from "./app.controller";
-import { ConfigModule, ConfigService } from "@nestjs/config";
 import { AppService } from "./app.service";
 import { getDatabaseConfig } from "./config/database.config";
 import { seedDatabase } from "./config/seeds/seed";
-import * as path from "node:path";
+import { CharactersModule } from "./modules/characters/characters.module";
 
 @Module({
 	imports: [
@@ -25,6 +28,11 @@ import * as path from "node:path";
 				return config;
 			},
 		}),
+		ServeStaticModule.forRoot({
+			rootPath: path.join(__dirname, "..", "public"),
+			serveRoot: "/api",
+		}),
+		CharactersModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

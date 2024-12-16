@@ -2,9 +2,11 @@ import type { DataSource } from "typeorm";
 import { Species } from "../../modules/species/entities/species.entity";
 import { Homeworld } from "../../modules/homeworld/entities/homeworld.entity";
 import { Character } from "../../modules/characters/entities/character.entity";
+import { ChickenCharacter } from "../../modules/characters/entities/chickenCharacter.entity";
 import speciesData from "./data/species.json";
 import homeworldsData from "./data/homeworlds.json";
 import charactersData from "./data/characters.json";
+import chickenCharacters from "./data/chickenCharacters.json";
 
 export const seedDatabase = async (dataSource: DataSource) => {
 	const speciesRepo = dataSource.getRepository(Species);
@@ -92,6 +94,48 @@ export const seedDatabase = async (dataSource: DataSource) => {
 				console.log(`Created character: ${charData.name}`);
 			} catch (error) {
 				console.error(`Error creating ${charData.name}:`, error);
+			}
+		}
+	}
+
+	console.log("Starting chicken characters seeding...");
+	const chickenCharacterRepo = dataSource.getRepository(ChickenCharacter);
+
+	for (const chickenData of chickenCharacters.chickenCharacters) {
+		const existingChicken = await chickenCharacterRepo
+			.createQueryBuilder("chickenCharacter")
+			.where("LOWER(chickenCharacter.name) = LOWER(:name)", {
+				name: chickenData.name,
+			})
+			.getOne();
+
+		if (!existingChicken) {
+			const originalCharacter = await characterRepo
+				.createQueryBuilder("character")
+				.where("LOWER(character.name) = LOWER(:name)", {
+					name: chickenData.originalCharacterName,
+				})
+				.getOne();
+
+			if (!originalCharacter) {
+				console.log(`Original character not found for ${chickenData.name}`);
+				continue;
+			}
+
+			const { originalCharacterName, ...chickenDataWithoutOriginal } =
+				chickenData;
+
+			try {
+				const newChickenCharacter = chickenCharacterRepo.create({
+					...chickenDataWithoutOriginal,
+					originalCharacter: originalCharacter,
+					homeworld: chickenData.homeworld as "L214" | "KFC",
+				});
+
+				await chickenCharacterRepo.save(newChickenCharacter);
+				console.log(`Created chicken character: ${chickenData.name}`);
+			} catch (error) {
+				console.error(`Error creating chicken ${chickenData.name}:`, error);
 			}
 		}
 	}
