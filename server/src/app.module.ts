@@ -10,6 +10,8 @@ import { AppService } from "./app.service";
 import { getDatabaseConfig } from "./config/database.config";
 import { seedDatabase } from "./config/seeds/seed";
 import { CharactersModule } from "./modules/characters/characters.module";
+import { HomeworldModule } from "./modules/homeworld/homeworld.module";
+import { SpeciesModule } from "./modules/species/species.module";
 
 @Module({
 	imports: [
@@ -33,6 +35,8 @@ import { CharactersModule } from "./modules/characters/characters.module";
 			serveRoot: "/api",
 		}),
 		CharactersModule,
+		HomeworldModule,
+		SpeciesModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

@@ -36,7 +36,13 @@ export class CharactersController {
 	}
 
 	@Get("name/:name")
-	findByName(): string {
-		return "this action return character by name";
+	async findByName(
+		@Param("name") name: string,
+		@Query("chicken") chicken?: boolean,
+	): Promise<Character[] | ChickenCharacter[] | null> {
+		if (chicken === true) {
+			return await this.chickenCharactersService.findByName(name);
+		}
+		return await this.charactersService.findByName(name);
 	}
 }
