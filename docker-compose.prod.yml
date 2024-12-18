@@ -27,6 +27,8 @@ services:
       - DBUSERNAME=${DBUSERNAME}
       - DBPASS=${DBPASS}
       - SERVER_PORT=${SERVER_PORT}
+      - VITE_API_URL=${VITE_API_URL}
+
 
   db:
     image: postgres:16
