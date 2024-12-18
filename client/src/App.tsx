@@ -26,7 +26,7 @@ const APIGuide = () => {
 	const [characters, setCharacters] = useState<Character[]>([]);
 
 	useEffect(() => {
-		fetch("http://localhost:8060/api/characters/original?take=10")
+		fetch("https://starwarsapi.remote-8.wilders.dev/api/characters/original?take=10")
 			.then((res) => res.json())
 			.then((data) => setCharacters(data));
 	}, []);
