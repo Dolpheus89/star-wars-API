@@ -10,8 +10,11 @@ export class ChickenCharactersService {
 		private chickenCharactersRepository: Repository<ChickenCharacter>,
 	) {}
 
-	findAll(): Promise<ChickenCharacter[]> {
-		return this.chickenCharactersRepository.find();
+	findAll(take: number, skip: number): Promise<ChickenCharacter[]> {
+		return this.chickenCharactersRepository.find({
+			take,
+			skip,
+		});
 	}
 
 	findOneByID(id: number): Promise<ChickenCharacter | null> {

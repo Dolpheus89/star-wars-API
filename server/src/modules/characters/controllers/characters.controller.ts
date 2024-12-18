@@ -1,4 +1,11 @@
-import { Controller, Get, Param, Query, ParseIntPipe } from "@nestjs/common";
+import {
+	Controller,
+	Get,
+	Param,
+	Query,
+	ParseIntPipe,
+	DefaultValuePipe,
+} from "@nestjs/common";
 import { Character } from "../entities/character.entity";
 import { ChickenCharacter } from "../entities/chickenCharacter.entity";
 import { CharactersService } from "../services/characters.service";
@@ -12,8 +19,11 @@ export class CharactersController {
 	) {}
 
 	@Get("original")
-	async findAllCanon(): Promise<Character[]> {
-		return await this.charactersService.findAll();
+	async findAllCanon(
+		@Query("take", new DefaultValuePipe(100), ParseIntPipe) take: number,
+		@Query("skip", new DefaultValuePipe(0), ParseIntPipe) skip: number,
+	): Promise<Character[]> {
+		return await this.charactersService.findAll(take, skip);
 	}
 
 	@Get("original/:id")
@@ -24,8 +34,11 @@ export class CharactersController {
 	}
 
 	@Get("chickens")
-	async findAllChickens(): Promise<ChickenCharacter[]> {
-		return await this.chickenCharactersService.findAll();
+	async findAllChickens(
+		@Query("take", new DefaultValuePipe(100), ParseIntPipe) take: number,
+		@Query("skip", new DefaultValuePipe(0), ParseIntPipe) skip: number,
+	): Promise<ChickenCharacter[]> {
+		return await this.chickenCharactersService.findAll(take, skip);
 	}
 
 	@Get("chickens/:id")

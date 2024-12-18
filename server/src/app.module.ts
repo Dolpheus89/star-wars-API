@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { ServeStaticModule } from "@nestjs/serve-static";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { RateLimiterModule } from "nestjs-rate-limiter";
 import { DataSource } from "typeorm";
 import * as path from "node:path";
 
@@ -33,6 +34,10 @@ import { SpeciesModule } from "./modules/species/species.module";
 		ServeStaticModule.forRoot({
 			rootPath: path.join(__dirname, "..", "public"),
 			serveRoot: "/api",
+		}),
+		RateLimiterModule.register({
+			points: 5,
+			duration: 1,
 		}),
 		CharactersModule,
 		HomeworldModule,

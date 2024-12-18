@@ -1,4 +1,11 @@
-import { Controller, Get, Param, ParseIntPipe } from "@nestjs/common";
+import {
+	Controller,
+	Get,
+	Param,
+	ParseIntPipe,
+	DefaultValuePipe,
+	Query,
+} from "@nestjs/common";
 import { Species } from "../entities/species.entity";
 import { SpeciesService } from "../services/species.service";
 
@@ -7,8 +14,11 @@ export class SpeciesController {
 	constructor(private readonly speciesService: SpeciesService) {}
 
 	@Get()
-	async findAll(): Promise<Species[]> {
-		return await this.speciesService.findAll();
+	async findAll(
+		@Query("take", new DefaultValuePipe(100), ParseIntPipe) take: number,
+		@Query("skip", new DefaultValuePipe(0), ParseIntPipe) skip: number,
+	): Promise<Species[]> {
+		return await this.speciesService.findAll(take, skip);
 	}
 
 	@Get(":id")

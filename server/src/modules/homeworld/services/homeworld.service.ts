@@ -10,8 +10,11 @@ export class HomeworldService {
 		private homeworldsRepository: Repository<Homeworld>,
 	) {}
 
-	findAll(): Promise<Homeworld[]> {
-		return this.homeworldsRepository.find();
+	findAll(take: number, skip: number): Promise<Homeworld[]> {
+		return this.homeworldsRepository.find({
+			take,
+			skip,
+		});
 	}
 
 	findOneByID(id: number): Promise<Homeworld | null> {

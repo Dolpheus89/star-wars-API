@@ -7,8 +7,13 @@ import speciesData from "./data/species.json";
 import homeworldsData from "./data/homeworlds.json";
 import charactersData from "./data/characters.json";
 import chickenCharacters from "./data/chickenCharacters.json";
+import * as dotenv from "dotenv";
+import { resolve } from "node:path";
+
+dotenv.config({ path: resolve(__dirname, "../../../../.env") });
 
 export const seedDatabase = async (dataSource: DataSource) => {
+	const apiPath = process.env.VITE_API_URL;
 	const speciesRepo = dataSource.getRepository(Species);
 	const homeworldRepo = dataSource.getRepository(Homeworld);
 	const characterRepo = dataSource.getRepository(Character);
@@ -129,6 +134,7 @@ export const seedDatabase = async (dataSource: DataSource) => {
 				const newChickenCharacter = chickenCharacterRepo.create({
 					...chickenDataWithoutOriginal,
 					originalCharacter: originalCharacter,
+					imageUrl: `${apiPath}${chickenData.imageUrl}`,
 					homeworld: chickenData.homeworld as "L214" | "KFC",
 				});
 

@@ -7,7 +7,7 @@
 			"birth_year": "-19",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/CluckSkylwalker.jpg",
+			"imageUrl": "/assets/images/CluckSkylwalker.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Luke Skywalker"
@@ -19,7 +19,7 @@
 			"birth_year": "-41",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/DarkFeather.jpg",
+			"imageUrl": "/assets/images/DarkFeather.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Darth Vader"
@@ -31,7 +31,7 @@
 			"birth_year": "-19",
 			"gender": "female",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/LayerOrgana.jpg",
+			"imageUrl": "/assets/images/LayerOrgana.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Leia Organa"
@@ -43,7 +43,7 @@
 			"birth_year": "-57",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/ObiWingKenobi.jpg",
+			"imageUrl": "/assets/images/ObiWingKenobi.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Obi-Wan Kenobi"
@@ -55,7 +55,7 @@
 			"birth_year": "-29",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/HenSolo.jpg",
+			"imageUrl": "/assets/images/HenSolo.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Han Solo"
@@ -67,7 +67,7 @@
 			"birth_year": "-200",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/Chewbocka.jpg",
+			"imageUrl": "/assets/images/Chewbocka.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Chewbacca"
@@ -79,7 +79,7 @@
 			"birth_year": "-82",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/EmperorPoultine.jpg",
+			"imageUrl": "/assets/images/EmperorPoultine.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Palpatine"
@@ -91,7 +91,7 @@
 			"birth_year": "-896",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/Yolka.jpg",
+			"imageUrl": "/assets/images/Yolka.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Yoda"
@@ -103,7 +103,7 @@
 			"birth_year": "-54",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/DrumstickMaul.jpg",
+			"imageUrl": "/assets/images/DrumstickMaul.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Darth Maul"
@@ -115,7 +115,7 @@
 			"birth_year": "-72",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/MaceWingdu.jpg",
+			"imageUrl": "/assets/images/MaceWingdu.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Mace Windu"
@@ -127,7 +127,7 @@
 			"birth_year": "-102",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/CountRoostku.jpg",
+			"imageUrl": "/assets/images/CountRoostku.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Count Dooku"
@@ -139,7 +139,7 @@
 			"birth_year": "-46",
 			"gender": "female",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/QueenEggmidala.jpg",
+			"imageUrl": "/assets/images/QueenEggmidala.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Padmé Amidala"
@@ -151,7 +151,7 @@
 			"birth_year": "-92",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/Qui-GonGrain.jpg",
+			"imageUrl": "/assets/images/Qui-GonGrain.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Qui-Gon Jinn"
@@ -163,7 +163,7 @@
 			"birth_year": "unknown",
 			"gender": "female",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/CaptainPhasmegg.jpg",
+			"imageUrl": "/assets/images/CaptainPhasmegg.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Captain Phasma"
@@ -175,7 +175,7 @@
 			"birth_year": "2",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/PoeScrambleron.jpg",
+			"imageUrl": "/assets/images/PoeScrambleron.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Poe Dameron"
@@ -187,7 +187,7 @@
 			"birth_year": "11",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/FreeRangeFinn.jpg",
+			"imageUrl": "/assets/images/FreeRangeFinn.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Finn"
@@ -199,7 +199,7 @@
 			"birth_year": "15",
 			"gender": "female",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/Rey-oastedChicken.jpg",
+			"imageUrl": "/assets/images/Rey-oastedChicken.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "L214",
 			"originalCharacterName": "Rey"
@@ -211,7 +211,7 @@
 			"birth_year": "-600",
 			"gender": "male",
 			"canon_status": true,
-			"imageUrl": "/server/public/assets/images/JabbatheCluck.jpg",
+			"imageUrl": "/assets/images/JabbatheCluck.jpg",
 			"species": "Gallus gallus domesticus",
 			"homeworld": "KFC",
 			"originalCharacterName": "Jabba the Hutt"

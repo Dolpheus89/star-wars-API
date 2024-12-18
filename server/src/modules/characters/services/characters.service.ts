@@ -10,8 +10,11 @@ export class CharactersService {
 		private charactersRepository: Repository<Character>,
 	) {}
 
-	findAll(): Promise<Character[]> {
-		return this.charactersRepository.find();
+	findAll(take: number, skip: number): Promise<Character[]> {
+		return this.charactersRepository.find({
+			take,
+			skip,
+		});
 	}
 
 	findOneByID(id: number): Promise<Character | null> {

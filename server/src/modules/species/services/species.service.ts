@@ -10,8 +10,11 @@ export class SpeciesService {
 		private speciessRepository: Repository<Species>,
 	) {}
 
-	findAll(): Promise<Species[]> {
-		return this.speciessRepository.find();
+	findAll(take: number, skip: number): Promise<Species[]> {
+		return this.speciessRepository.find({
+			take,
+			skip,
+		});
 	}
 
 	findOneByID(id: number): Promise<Species | null> {

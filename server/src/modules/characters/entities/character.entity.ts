@@ -38,12 +38,14 @@ export class Character {
 	@ManyToOne(
 		() => Species,
 		(species) => species.characters,
+		{ eager: true },
 	)
 	species: Species;
 
 	@ManyToOne(
 		() => Homeworld,
 		(homeworld) => homeworld.characters,
+		{ eager: true },
 	)
 	homeworld: Homeworld;
 
