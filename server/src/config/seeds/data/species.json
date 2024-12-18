@@ -1,0 +1,179 @@
+{
+	"species": [
+		{
+			"name": "Human",
+			"classification": "mammal",
+			"average_lifespan": "120"
+		},
+		{
+			"name": "Droid",
+			"classification": "artificial",
+			"average_lifespan": "indefinite"
+		},
+		{
+			"name": "Wookiee",
+			"classification": "mammal",
+			"average_lifespan": "400"
+		},
+		{
+			"name": "Rodian",
+			"classification": "reptilian",
+			"average_lifespan": "100"
+		},
+		{
+			"name": "Hutt",
+			"classification": "gastropod",
+			"average_lifespan": "1000"
+		},
+		{
+			"name": "Twi'lek",
+			"classification": "mammal",
+			"average_lifespan": "200"
+		},
+		{
+			"name": "Chiss",
+			"classification": "mammal",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Zabrak",
+			"classification": "mammal",
+			"average_lifespan": "100"
+		},
+		{
+			"name": "Mon Calamari",
+			"classification": "amphibian",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Duros",
+			"classification": "reptilian",
+			"average_lifespan": "70"
+		},
+		{
+			"name": "Trandoshan",
+			"classification": "reptilian",
+			"average_lifespan": "60"
+		},
+		{
+			"name": "Ewok",
+			"classification": "mammal",
+			"average_lifespan": "60"
+		},
+		{
+			"name": "Gungan",
+			"classification": "amphibian",
+			"average_lifespan": "65"
+		},
+		{
+			"name": "Neimodian",
+			"classification": "reptilian",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Kaminoan",
+			"classification": "mammal",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Geonosian",
+			"classification": "insectoid",
+			"average_lifespan": "30"
+		},
+		{
+			"name": "Togruta",
+			"classification": "mammal",
+			"average_lifespan": "94"
+		},
+		{
+			"name": "Kel Dor",
+			"classification": "mammal",
+			"average_lifespan": "70"
+		},
+		{
+			"name": "Ithorian",
+			"classification": "mammal",
+			"average_lifespan": "150"
+		},
+		{
+			"name": "Cerean",
+			"classification": "mammal",
+			"average_lifespan": "94"
+		},
+		{
+			"name": "Nikto",
+			"classification": "reptilian",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Chadra-Fan",
+			"classification": "mammal",
+			"average_lifespan": "40"
+		},
+		{
+			"name": "Devaronian",
+			"classification": "mammal",
+			"average_lifespan": "150"
+		},
+		{
+			"name": "Sullustan",
+			"classification": "mammal",
+			"average_lifespan": "75"
+		},
+		{
+			"name": "Barabel",
+			"classification": "reptilian",
+			"average_lifespan": "90"
+		},
+		{
+			"name": "Vulptereen",
+			"classification": "mammal",
+			"average_lifespan": "70"
+		},
+		{
+			"name": "Mirialan",
+			"classification": "mammal",
+			"average_lifespan": "100"
+		},
+		{
+			"name": "Quarren",
+			"classification": "amphibian",
+			"average_lifespan": "79"
+		},
+		{
+			"name": "Ugnaught",
+			"classification": "mammal",
+			"average_lifespan": "200"
+		},
+		{
+			"name": "Pau'an",
+			"classification": "mammal",
+			"average_lifespan": "700"
+		},
+		{
+			"name": "Yoda's Species",
+			"classification": "unknown",
+			"average_lifespan": "900"
+		},
+		{
+			"name": "Neimoidian",
+			"classification": "reptilian",
+			"average_lifespan": "80"
+		},
+		{
+			"name": "Dathomirian Zabrak",
+			"classification": "mammal",
+			"average_lifespan": "100"
+		},
+		{
+			"name": "Nautolan",
+			"classification": "amphibian",
+			"average_lifespan": "70"
+		},
+		{
+			"name": "Kaleesh",
+			"classification": "reptilian",
+			"average_lifespan": "80"
+		}
+	]
+}
