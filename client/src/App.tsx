@@ -60,7 +60,7 @@ const APIGuide = () => {
 						<div>
 							<h3 className="font-semibold">Versions Poulet:</h3>
 							<code className="bg-slate-100 p-2 rounded block">
-								/characters/chicken?take=10&skip=0
+								/characters/chickens?take=10&skip=0
 							</code>
 						</div>
             <div>
